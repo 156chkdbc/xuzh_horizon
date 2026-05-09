@@ -5,270 +5,269 @@ date: 2026-05-09
 lang: zh
 ---
 
-> From 36 items, 12 important content pieces were selected
+> From 37 items, 13 important content pieces were selected
 
 ---
 
-1. [人工智能正在打破两种漏洞披露文化](#item-1) ⭐️ 9.0/10
-2. [Triton v3.7.0 发布：新增操作、缩放 BMM 和 FP8 常量](#item-2) ⭐️ 8.0/10
-3. [Google reCAPTCHA 对去 Google 化 Android 用户失效](#item-3) ⭐️ 8.0/10
-4. [Meshtastic：离网网格短信通信](#item-4) ⭐️ 8.0/10
-5. [Mojo 1.0 Beta：与 Python 兼容且性能媲美 Rust 的语言](#item-5) ⭐️ 8.0/10
-6. [Mozilla 使用 Claude Mythos AI 强化 Firefox](#item-6) ⭐️ 8.0/10
-7. [ChatGPT 新增信任联系人功能检测自残话题](#item-7) ⭐️ 8.0/10
-8. [OpenAI 为 Codex 推出 Chrome 扩展，支持浏览器代理任务](#item-8) ⭐️ 8.0/10
-9. [Cloudflare 裁员逾 1100 人，称 AI 驱动重组](#item-9) ⭐️ 8.0/10
-10. [Anthropic 拟巨额融资，估值逼近万亿美元](#item-10) ⭐️ 8.0/10
-11. [美国怀疑英伟达芯片经泰国走私至阿里巴巴](#item-11) ⭐️ 8.0/10
-12. [苹果拟结束台积电独家代工，考虑英特尔](#item-12) ⭐️ 8.0/10
+1. [Mozilla 使用 Claude Mythos 发现数百个 Firefox 漏洞](#item-1) ⭐️ 9.0/10
+2. [Triton 3.7.0 发布：新增张量操作与 FP8 支持](#item-2) ⭐️ 8.0/10
+3. [Google 新版 reCAPTCHA 实行远程证明，阻碍去 Google 化安卓用户](#item-3) ⭐️ 8.0/10
+4. [人工智能打破两种漏洞披露文化](#item-4) ⭐️ 8.0/10
+5. [Meta 停止 Instagram 私信端到端加密](#item-5) ⭐️ 8.0/10
+6. [Mojo 1.0 Beta 发布：兼容 Python，引入 Rust 所有权与 Zig 编译时计算](#item-6) ⭐️ 8.0/10
+7. [Luke Curley 批评 WebRTC 丢包影响 LLM 提示](#item-7) ⭐️ 8.0/10
+8. [Canvas LMS 遭 ShinyHunters 黑客攻击，影响美国学校期末周](#item-8) ⭐️ 8.0/10
+9. [Cloudflare 裁员超 1100 人，称 AI 使用量激增 600%是关键原因](#item-9) ⭐️ 8.0/10
+10. [Anthropic 拟融资数百亿美元，估值逼近万亿美元](#item-10) ⭐️ 8.0/10
+11. [美国怀疑英伟达芯片经泰国走私至中国，阿里巴巴被指为终端客户](#item-11) ⭐️ 8.0/10
+12. [DeepSeek 寻求 450 亿美元估值，国资或领投](#item-12) ⭐️ 8.0/10
+13. [苹果或结束台积电独家代工，考虑英特尔代工部分芯片](#item-13) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [人工智能正在打破两种漏洞披露文化](https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures) ⭐️ 9.0/10
+## [Mozilla 使用 Claude Mythos 发现数百个 Firefox 漏洞](https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything) ⭐️ 9.0/10
 
-类似于 LLM 的人工智能工具正在加速打破开源和闭源软件之间不同的漏洞披露文化，因为它们使得漏洞利用的生成和分析变得更加容易。 这迫使人们重新评估披露规范和禁运期，因为协调漏洞披露的时间窗口正在缩小，影响了开源和专有软件生态系统。 这种崩溃早已在积累，原因是软件透明度提高和逆向工程工具改进，这早于 LLM 的出现；社区评论指出，通过对比提交来生成漏洞利用代码早已成为可能。
+Mozilla 利用 Anthropic 的 Claude Mythos 预览版在 Firefox 中定位并修复了数百个安全漏洞，2026 年 4 月修复了 423 个安全漏洞，远高于通常的每月 20-30 个。 这标志着 AI 辅助安全的范式转变，LLM 从生成无用的漏洞报告转变为产生高质量、可操作的漏洞发现，可能大幅降低开源软件加固的成本和人力。 发现的漏洞包括一个存在 20 年的 XSLT 漏洞和一个存在 15 年的 <legend> HTML 元素漏洞；许多尝试被 Firefox 的纵深防御措施阻断，突显了该模型发现细微缺陷的能力。
 
-hackernews · speckx · May 8, 17:55 · [社区讨论](https://news.ycombinator.com/item?id=48066524)
+rss · Simon Willison · May 7, 17:56
 
-**背景**: 漏洞披露传统上有两种文化：开源文化中，补丁是公开的，漏洞利用代码可以快速逆向工程；闭源文化中，披露通过禁运期协调，以便有时间修复。禁运期是漏洞在可信方之间保密的时间窗口。人工智能工具降低了生成漏洞利用代码的门槛，削弱了禁运期的有效性，并使这两种文化之间的界限变得模糊。
+**背景**: Claude Mythos 是 Anthropic 开发的先进 AI 模型，专为复杂的多步网络安全任务设计。此前，AI 生成的安全报告常常不正确且给维护者带来负担。Mozilla 结合了改进的模型和更优的提示技术，过滤噪声并放大信号，在漏洞检测方面取得了突破。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://dl.acm.org/doi/full/10.1145/3716822">An Empirical Study on Vulnerability Disclosure Management of ...</a></li>
-<li><a href="https://openssf.org/groups/vulnerability-disclosures/">Vulnerability Disclosures – Open Source Security Foundation</a></li>
-<li><a href="https://www.redhat.com/en/blog/Understanding-security-embargoes-at-Red-Hat">Understanding security embargoes at Red Hat</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_(language_model)">Claude (language model) - Wikipedia</a></li>
+<li><a href="https://www.bbc.com/news/articles/crk1py1jgzko">What is Anthopic's Claude Mythos and what risks does it pose?</a></li>
+<li><a href="https://www.pluralsight.com/resources/blog/ai-and-data/what-is-claude-mythos">What is Claude Mythos? | Pluralsight</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论显示观点不一：tptacek 认为这种崩溃早已被预测，且由软件透明度驱动，而非仅仅是 AI；dmurray 讽刺地建议将 Linux 转为闭源模式；rikafurude21 指出这是一个被重新包装的老问题；freeqaz 引用 Log4Shell 作为例子，黑帽在协调披露之前就利用了公开的补丁。
-
-**标签**: `#AI`, `#security`, `#vulnerability disclosure`, `#open source`, `#cybersecurity`
+**标签**: `#AI`, `#security`, `#Firefox`, `#vulnerability detection`, `#LLM`
 
 ---
 
 <a id="item-2"></a>
-## [Triton v3.7.0 发布：新增操作、缩放 BMM 和 FP8 常量](https://github.com/triton-lang/triton/releases/tag/v3.7.0) ⭐️ 8.0/10
+## [Triton 3.7.0 发布：新增张量操作与 FP8 支持](https://github.com/triton-lang/triton/releases/tag/v3.7.0) ⭐️ 8.0/10
 
-Triton v3.7.0 新增了 tl.squeeze 和 tl.unsqueeze 等操作、缩放批量矩阵乘法（scaled BMM）以及直接创建 FP8 常量的能力。还包括 AMD/HIP 和 NVIDIA 后端的改进、错误修复和性能优化。 Triton 是 AI/ML 领域广泛使用的 GPU 编译器，此版本增强了其表达能力和性能，支持更高效的自定义内核开发。缩放 BMM 和 FP8 支持对 Transformer 等现代深度学习工作负载尤为重要。 缩放 BMM 功能（PR #9000）允许带缩放的批量矩阵乘法，有利于注意力机制。FP8 常量（PR #8882）支持直接创建 8 位浮点值。此版本还包括重大变更，例如对 make_block_ptr 的弃用警告。
+Triton 3.7.0 引入了 tl.squeeze 和 tl.unsqueeze 操作、缩放批量矩阵乘法以及直接创建 FP8 常量。该版本还包括对 AMD 和 NVIDIA GPU 的后端增强。 此版本增强了 Triton 在深度学习工作负载中的表达能力，特别是针对效率日益重要的低精度 FP8 计算。新操作简化了复杂 GPU 内核的编写。 缩放 BMM 操作支持高效的批量矩阵乘法，并可选择缩放。FP8 常量允许直接使用 8 位浮点值，无需转换。后端改进包括 NVIDIA 的 2CTA 模式和 TMA 多播，以及 AMD 的多种修复。
 
 github · atalman · May 7, 22:19
 
-**背景**: Triton 是 OpenAI 开发的开源语言和编译器，用于编写高效的 GPU 内核。它让开发者可以用 Python 编写高性能代码，而无需使用底层 CUDA。缩放 BMM 指的是将批量矩阵乘法的结果乘以一个缩放因子，常用于缩放点积注意力机制。FP8 是一种 8 位浮点格式（E4M3 和 E5M2），旨在降低深度学习中的内存和计算开销，同时保持精度。
-
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://openai.com/index/triton/">Introducing Triton: Open-source GPU programming for neural networks | OpenAI</a></li>
-<li><a href="https://github.com/triton-lang/triton">GitHub - triton-lang/triton: Development repository for the Triton language and compiler · GitHub</a></li>
-<li><a href="https://developer.nvidia.com/blog/floating-point-8-an-introduction-to-efficient-lower-precision-ai-training/">Floating-Point 8: An Introduction to Efficient, Lower-Precision AI Training | NVIDIA Technical Blog</a></li>
+<li><a href="https://github.com/parca-dev/proton">GitHub - parca-dev/ proton</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Minifloat">Minifloat - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 新闻项中未提供社区评论。
-
-**标签**: `#triton`, `#gpu`, `#compiler`, `#deep-learning`
+**标签**: `#Triton`, `#GPU compiler`, `#deep learning`, `#release`, `#open source`
 
 ---
 
 <a id="item-3"></a>
-## [Google reCAPTCHA 对去 Google 化 Android 用户失效](https://reclaimthenet.org/google-broke-recaptcha-for-de-googled-android-users) ⭐️ 8.0/10
+## [Google 新版 reCAPTCHA 实行远程证明，阻碍去 Google 化安卓用户](https://reclaimthenet.org/google-broke-recaptcha-for-de-googled-android-users) ⭐️ 8.0/10
 
-Google 将 reCAPTCHA 更新为远程证明系统，导致移除了 Google Play 服务的 Android 用户（如使用 GrapheneOS 或华为手机的用户）无法通过验证。 这一变化限制了注重隐私的用户和非 Google 设备的访问，凸显了反滥用措施与用户自主权之间的紧张关系，并可能促使更多网站寻找替代的验证码方案。 新的 reCAPTCHA 本质上执行远程证明，需要与 Google 服务器交互，并可能泄露硬件绑定标识。社区成员将其描述为一种“了解你的客户”（KYC）验证形式。
+Google 新版 reCAPTCHA 实际上执行了远程证明，破坏了去 Google 化安卓用户的功能，并引发了严重的隐私担忧。 这一变化影响了选择从安卓设备上移除 Google 服务的用户，限制了他们访问许多使用 reCAPTCHA 的网站。同时，远程证明可能将设备身份与用户活动关联，引发了严重的隐私问题。 新版 reCAPTCHA 使用远程证明，涉及从烧录的私钥 (EK) 到由 Google 服务器签名的临时身份密钥 (AIK) 的信任链，可能允许 Google 跨会话关联设备身份。
 
 hackernews · anonymousiam · May 8, 18:45 · [社区讨论](https://news.ycombinator.com/item?id=48067119)
 
-**背景**: “去 Google 化 Android” 是指运行没有 Google 专有服务的 Android 设备，通常通过自定义 ROM（如 GrapheneOS）或禁用 Google 应用来实现。远程证明是一种安全机制，设备通过硬件支持的密钥向远程服务器证明其完整性，常用于机密计算。
+**背景**: 远程证明是一种可信计算技术，设备通过它向远程验证者证明其完整性。在此上下文中，Google 的 reCAPTCHA 利用它来确保设备未被篡改。去 Google 化安卓指移除了 Google 服务的设备，通常运行自定义 ROM。这些设备缺乏通过远程证明所需的专有组件，因此被屏蔽。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/DeGoogle">DeGoogle - Wikipedia</a></li>
-<li><a href="https://confidentialcomputing.io/2024/10/02/what-is-remote-attestation-enhancing-data-governance-with-confidential-computing/">What Is Remote Attestation? Enhancing Data Governance with ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Remote_attestation">Remote attestation</a></li>
+<li><a href="https://tech.yahoo.com/phones/articles/googling-android-simpler-think-no-193119747.html">De - Googling Android is simpler than you think—no special phone...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者担心 reCAPTCHA 现在成了事实上的 KYC 门槛，一位用户指出它迫使用户拥有 SIM 卡和 Google 账户。其他人分享了替代方案如 hCaptcha 或自托管验证，而有些人则讲述了他们切换到 GrapheneOS 和自托管服务以摆脱对 Google 依赖的经历。
+**社区讨论**: 评论表达了沮丧和担忧。用户讨论远程证明的技术细节，并寻求 reCAPTCHA 的替代方案。有人认为此举强制用户进行 KYC（了解你的客户），属于过度行为。
 
-**标签**: `#privacy`, `#Android`, `#reCAPTCHA`, `#degoogling`, `#remote attestation`
+**标签**: `#reCAPTCHA`, `#Android`, `#privacy`, `#remote attestation`, `#Google`
 
 ---
 
 <a id="item-4"></a>
-## [Meshtastic：离网网格短信通信](https://meshtastic.org/docs/introduction/) ⭐️ 8.0/10
+## [人工智能打破两种漏洞披露文化](https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures) ⭐️ 8.0/10
 
-Meshtastic，一个基于 LoRa 的离网网格短信系统，在其官方网站上被介绍，引起了社区的高度关注，获得了 368 个点赞和 145 条评论。 该技术无需依赖现有基础设施即可实现去中心化、低功耗、远距离通信，对于无互联网接入的紧急情况、户外活动和物联网应用至关重要。 Meshtastic 在免许可证的 ISM 无线电频段上使用 LoRa 调制工作，发射功率有限但对加密无限制。它通过转发消息形成网格网络，每个设备可连接一部手机。
+一项新分析指出，人工智能通过加速漏洞利用生成并扩大协调披露与公开利用之间的鸿沟，正在瓦解传统的漏洞披露规范。 这一转变可能从根本上改变漏洞报告和修补的方式，增加零日漏洞被利用的风险，并削弱协调披露的效果。 该分析以 Log4Shell 事件为基础，指出 AI 工具让攻击者生成漏洞利用代码的速度快于防御者修补的速度，对代码公开的开源软件影响尤甚。
 
-hackernews · ColinWright · May 8, 11:22 · [社区讨论](https://news.ycombinator.com/item?id=48061566)
+hackernews · speckx · May 8, 17:55 · [社区讨论](https://news.ycombinator.com/item?id=48066524)
 
-**背景**: LoRa 是一种专有的扩频调制技术，专为远距离、低功耗无线通信设计，常用于物联网。网格网络是一种每个节点为其他节点转发数据的拓扑结构，可扩展覆盖范围。Meshtastic 结合这两者，创建了一个去中心化的离网消息系统，工作在 915 MHz（美国）或 868 MHz（欧洲）的 ISM 频段。
+**背景**: 漏洞披露传统上存在两种主要文化：协调披露（研究人员私下通知厂商并给予修补时间）和完全披露（立即公开细节）。人工智能的兴起以及软件透明度的提升——通过开源软件的采用和先进的逆向工程工具——模糊了这一区别，因为攻击者现在可以快速地从公开的补丁或提交中生成漏洞利用代码。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Meshtastic">Meshtastic</a></li>
-<li><a href="https://meshtastic.org/">Off-Grid Communication For Everyone | Meshtastic</a></li>
+**社区讨论**: 评论者普遍认为 AI 加速了已有趋势而非创造新问题，tptacek 指出软件透明度的影响早有预言。freeqaz 强调 Log4Shell 是漏洞利用与披露赛跑的关键例子。但 rikafurude21 认为更廉价的漏洞利用生成反而使协调披露更加重要。
 
-</ul>
-</details>
-
-**社区讨论**: 许多评论者对发现 Meshtastic 表示兴奋，一些长期用户称赞其潜力，并指出它鼓励他们获得 HAM 执照。然而，也有人对该组织的诉讼行为表示担忧，一位用户指出其领导层积极保护“Meshtastic”名称，打击其他项目。
-
-**标签**: `#mesh networking`, `#LoRa`, `#decentralized communication`, `#amateur radio`, `#open source`
+**标签**: `#AI`, `#cybersecurity`, `#vulnerability disclosure`, `#open source`, `#Log4Shell`
 
 ---
 
 <a id="item-5"></a>
-## [Mojo 1.0 Beta：与 Python 兼容且性能媲美 Rust 的语言](https://mojolang.org/) ⭐️ 8.0/10
+## [Meta 停止 Instagram 私信端到端加密](https://www.pcmag.com/news/meta-shuts-down-end-to-end-encryption-for-instagram-dms-messaging) ⭐️ 8.0/10
 
-Mojo 1.0 Beta 已发布，推出了一种兼容 Python 的编程语言，将高级语法与所有权和 comptime（编译时计算）等系统级性能特性相结合。 这一版本意义重大，因为 Mojo 旨在弥合易用性（Python）和原始性能（C++/Rust）之间的差距，有可能通过让开发者无需牺牲生产力即可编写快速代码来改变 AI 和高性能计算领域。社区对此高度兴奋，许多人希望它成为 Julia、Numba 和 Triton 的可行替代方案。 Mojo 使用 MLIR（多层中间表示）而非直接针对 LLVM，从而能更好地优化 CPU、GPU 和其他加速器。但截至 2025 年 10 月，编译器仍为闭源，标准库开源；Modular 承诺于 2026 年秋季将 Mojo 开源。
+Meta 已停止为 Instagram 私信提供端到端加密，理由是用户选择启用的人数太少。公司将转而以未加密形式存储消息。 这一决定引发了用户隐私方面的担忧，并标志着从行业加强加密的趋势倒退。批评者认为 Meta 优先考虑获取用户数据用于广告和合规，而非隐私保护。 该加密功能是选择性加入的，需要用户手动启用。Meta 声称很少用户选择开启，使得该功能不可持续。
 
-hackernews · sbt567 · May 8, 02:49 · [社区讨论](https://news.ycombinator.com/item?id=48057901)
+hackernews · tcp_handshaker · May 8, 21:47 · [社区讨论](https://news.ycombinator.com/item?id=48069192)
 
-**背景**: Mojo 是由 Modular Inc. 开发的系统编程语言，专为高性能 AI 基础设施设计。它基于 MLIR 编译器框架，能够实现比单独使用 LLVM 更高级的优化。关键特性包括类似 Rust 的所有权模型，用于无需垃圾回收的内存安全，以及类似 Zig 的 comptime（编译时计算）以实现零成本抽象。Mojo 的语法有意兼容 Python，以便于庞大的 Python 生态系统（尤其是机器学习和科学计算领域）采用。
+**背景**: 端到端加密确保只有发送方和接收方能读取消息，即使是服务提供商也无法访问内容。隐私倡导者通常推动默认加密，例如 WhatsApp（也属于 Meta）和 Signal 等应用。Meta 的决定与其早前承诺在其消息平台上推广加密的做法形成对比。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Mojo_(programming_language)">Mojo (programming language)</a></li>
-<li><a href="https://www.modular.com/open-source/mojo">Mojo : Powerful CPU+GPU Programming</a></li>
-<li><a href="https://zig.guide/language-basics/comptime/">Comptime - zig.guide</a></li>
+**社区讨论**: 评论批评 Meta 没有将加密设为默认，并将其与 Signal 和 WhatsApp 进行不利比较。一些人认为 Meta 的举动反映了企业普遍不愿将隐私置于商业利益之上，而另一些人则对保护用户数据方面缺乏进展表示沮丧。
 
-</ul>
-</details>
-
-**社区讨论**: 社区成员对 Mojo 的独特特性感到兴奋，有用户称赞其所有权模型、comptime 和 SIMD 支持，称其为‘很长时间以来第一个不仅仅是 LLVM 封装的语言’。但也有人担忧与 Python 的语法差异（例如字符串索引行为），并指出 Julia 已经解决了许多相同的用例。其他人则担心正确性问题和语言的闭源状态，不过对 2026 年开源承诺的接受度良好。
-
-**标签**: `#programming language`, `#performance`, `#python`, `#systems programming`, `#ML`
+**标签**: `#privacy`, `#encryption`, `#Instagram`, `#Meta`, `#tech-policy`
 
 ---
 
 <a id="item-6"></a>
-## [Mozilla 使用 Claude Mythos AI 强化 Firefox](https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything) ⭐️ 8.0/10
+## [Mojo 1.0 Beta 发布：兼容 Python，引入 Rust 所有权与 Zig 编译时计算](https://mojolang.org/) ⭐️ 8.0/10
 
-Mozilla 利用 Claude Mythos 预览版的访问权限，在 Firefox 中定位并修复了数百个漏洞，月度安全漏洞修复数量从每月 20-30 个激增至 2026 年 4 月的 423 个。 这展示了 AI 辅助安全审计的重大进步，从无效的 AI 错误报告转向高效的漏洞检测，可能为开源项目安全树立新标准。 AI 发现了一个存在 20 年的 XSLT 漏洞和一个存在 15 年的 <legend> 元素漏洞，许多尝试被 Firefox 现有的纵深防御措施阻止，这令人放心。
+Modular 公司发布了 Mojo 1.0 Beta，这是一种结合了 Python 语法、类似 Rust 的所有权机制和类似 Zig 的编译时计算（comptime）的编程语言，旨在用于高性能机器学习和系统编程。 Mojo 旨在弥合高级语言易用性与底层性能之间的差距，可能使 Python 开发者无需切换语言即可编写高效的系统代码。其独特地使用 MLIR 作为编译器基础设施，使其能够从单一代码库支持 CPU、GPU 和 TPU 等目标。 Mojo 目前闭源，但标准库开源，Modular 承诺将于 2026 年秋季开源。它支持一等 SIMD、丰富的类型系统，并可通过外部函数接口与 Python 互操作。
 
-rss · Simon Willison · May 7, 17:56
+hackernews · sbt567 · May 8, 02:49 · [社区讨论](https://news.ycombinator.com/item?id=48057901)
 
-**背景**: Firefox 是一款广泛使用的开源浏览器。Claude Mythos Preview 是 Anthropic 推出的高能力 AI 模型，尤其擅长软件工程和网络安全任务。传统上，AI 生成的安全漏洞报告通常质量低下，给维护者带来负担。
+**背景**: Mojo 构建于 MLIR（多层中间表示）之上，这是一种编译器框架，相比单独的 LLVM 能够实现更高级别的优化。这使得 Mojo 能够高效地针对包括 GPU 和 TPU 在内的多种硬件。所有权模型借鉴了 Rust，确保内存安全而无需垃圾回收；而 Zig 中的编译时执行（comptime）则实现了强大的元编程能力。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.anthropic.com/claude-mythos-preview-risk-report">Alignment Risk Update: Claude Mythos Preview - anthropic.com</a></li>
-<li><a href="https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities">Our evaluation of Claude Mythos Preview’s cyber capabilities</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mojo_(programming_language)">Mojo (programming language)</a></li>
+<li><a href="https://zig.guide/language-basics/comptime/">Comptime | zig .guide</a></li>
 
 </ul>
 </details>
 
-**标签**: `#security`, `#AI`, `#Firefox`, `#vulnerability detection`, `#open source`
+**社区讨论**: 评论者对 Mojo 的性能以及所有权和 comptime 等功能表示兴奋，但也指出由于语法差异和有限的 Python 兼容性，Python 开发者面临挑战。一些用户还对计划于 2026 年开源表示迫不及待。
+
+**标签**: `#programming language`, `#performance`, `#ML`, `#systems programming`, `#Mojo`
 
 ---
 
 <a id="item-7"></a>
-## [ChatGPT 新增信任联系人功能检测自残话题](https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification) ⭐️ 8.0/10
+## [Luke Curley 批评 WebRTC 丢包影响 LLM 提示](https://simonwillison.net/2026/May/9/luke-curley/#atom-everything) ⭐️ 8.0/10
 
-OpenAI 为 ChatGPT 成年用户推出了可选的“信任联系人”功能，当系统检测到自残或自杀相关内容时，可通知用户指定的朋友或家人。经专业团队审核确认存在严重安全顾虑后，会发送通知，但不会分享聊天内容。 该功能解决了一个关键的现实问题——AI 交互可能无意中加剧心理健康危机，此前曾发生一起涉及青少年的悲剧事件。它将安全措施扩展到成年用户，并为负责任地部署 AI 树立了行业先例。 该功能要求用户和信任联系人均为成年人（韩国需 19 岁以上），联系人需在一周内接受邀请。通知可通过电子邮件、短信或 ChatGPT 应用内通知发送，Meta 也在 Instagram 上推出了类似功能，当青少年反复搜索自残话题时会通知家长。
+Luke Curley 指出，WebRTC 为降低延迟而丢弃音频包的设计损害了 LLM 提示的准确性，并提到浏览器甚至无法重传丢失的数据包，以 Discord 的经验为例。 这突显了实时通信优化与 AI 模型准确性要求之间的根本冲突，可能影响基于语音的 AI 交互质量。 WebRTC 在网络条件不佳时主动丢弃音频包以保持低延迟，但这可能导致音频失真；Curley 指出，为获得准确的 LLM 提示，多等 200 毫秒是更可取的。
 
-telegram · zaihuapd · May 8, 02:47
+rss · Simon Willison · May 9, 01:03
 
-**背景**: ChatGPT 的新功能建立在此前针对青少年的安全措施之上，这些措施是在一名 16 岁男孩与 AI 聊天机器人长期交谈后自杀身亡后引入的。该事件引发了人们对 AI 在心理健康支持中角色以及加强安全保障必要性的担忧。OpenAI 现在将类似的保护措施扩展到成年用户。
+**背景**: WebRTC 是浏览器中实时通信的标准，专为视频通话等低延迟场景设计。大语言模型（LLM）处理语音提示需要准确的输入，因此丢包会带来问题。
 
-**标签**: `#safety`, `#AI ethics`, `#ChatGPT`, `#mental health`, `#OpenAI`
+**标签**: `#WebRTC`, `#LLM`, `#real-time communication`, `#audio`, `#latency`
 
 ---
 
 <a id="item-8"></a>
-## [OpenAI 为 Codex 推出 Chrome 扩展，支持浏览器代理任务](https://developers.openai.com/codex/changelog) ⭐️ 8.0/10
+## [Canvas LMS 遭 ShinyHunters 黑客攻击，影响美国学校期末周](https://www.cnn.com/2026/05/07/us/canvas-hack-strands-college-students-finals-week) ⭐️ 8.0/10
 
-OpenAI 发布了 Codex 的 Chrome 扩展，使其能够直接在浏览器中执行多步骤任务，如页面导航和数据录入，并在后台独立标签组中运行，不干扰用户当前标签页。 此扩展将 Codex 从编码工具转变为实用的浏览器自动化代理，用户无需 API 集成即可委托重复性网页任务，这可能大幅提升开发者和知识工作者的生产力。 Codex 通过编写并运行代码在后台标签页中执行任务，自动根据需要组合浏览器和插件工具。该扩展除欧盟和英国外全球可用，这两个地区后续支持。
+Instructure 旗下的 Canvas 学习管理系统遭到 ShinyHunters 黑客组织的勒索软件攻击和数据泄露，在美国学校期末周造成大范围中断。此次攻击泄露了超过 300 TB 的数据，包括学生姓名、ID 和学校邮箱，迫使部分大学重新安排考试时间。 此事件突显了关键教育基础设施的脆弱性，在高风险的学术期末影响了数千所学校和数百万学生。它强调了教育技术领域迫切需要加强网络安全措施，尤其是勒索软件组织越来越多地将目标对准敏感的学生数据。 ShinyHunters 声称对 2026 年 5 月针对 Instructure 的两起事件负责：5 月 1 日的第一起事件泄露了用户名、邮箱和学生 ID；5 月 7 日的第二起事件涉及勒索软件，导致许多用户无法访问 Canvas，据称影响近 9000 所学校或组织，窃取数据超过 300 TB。
 
-telegram · zaihuapd · May 8, 04:17
+telegram · zaihuapd · May 8, 04:30
 
-**背景**: Codex 是 OpenAI 于 2025 年 4 月发布的 AI 编码代理，能够编写代码、修复 Bug 并加速软件工程任务。AI 代理的浏览器自动化通常依赖 Chrome DevTools 协议 (CDP) 来控制浏览器。这款新扩展将 Codex 的能力扩展到实时与 Web 应用程序交互。
+**背景**: Canvas 是由 Instructure 开发的基于云的学习管理系统 (LMS)，广泛应用于 K-12、高等教育和企业培训，用于课程管理、测验和学生互动。ShinyHunters 是一个成立于 2019 年左右的黑帽犯罪黑客组织，以在多个行业策划数据泄露而闻名。该组织通常窃取数据并勒索赎金，威胁若不支付则泄露敏感信息。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Codex_(AI_agent)">Codex (AI agent) - Wikipedia</a></li>
-<li><a href="https://openai.com/codex/">Codex | AI Coding Partner from OpenAI</a></li>
-<li><a href="https://www.allabtai.com/ai-browser-automation/">AI Browser Automation: Complete Guide for AI Agents (2026)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Canvas_LMS">Canvas LMS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ShinyHunters">ShinyHunters - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**标签**: `#OpenAI`, `#Codex`, `#Chrome扩展`, `#AI agent`, `#浏览器自动化`
+**标签**: `#cybersecurity`, `#data breach`, `#education`, `#ransomware`, `#canvas`
 
 ---
 
 <a id="item-9"></a>
-## [Cloudflare 裁员逾 1100 人，称 AI 驱动重组](https://blog.cloudflare.com/building-for-the-future/) ⭐️ 8.0/10
+## [Cloudflare 裁员超 1100 人，称 AI 使用量激增 600%是关键原因](https://blog.cloudflare.com/building-for-the-future/) ⭐️ 8.0/10
 
-2026 年 5 月 7 日，Cloudflare 宣布裁员超过 1100 人，称过去三个月内内部 AI 使用量增长超过 600%是组织重组的主要原因。 此次裁员反映了更广泛的行业趋势，即 AI 的快速采用正在重塑劳动力结构，可能为其他考虑类似举措的科技公司树立先例。 遣散方案包括全额基本工资至 2026 年底、美国境内医疗保险至年底、股权归属延至 2026 年 8 月 15 日，并对未满一年服务期的员工豁免悬崖期条款。公司强调这是一次性裁员，通过直接邮件通知离职员工。
+Cloudflare 宣布在全球范围内裁减超过 1100 名员工，并将此次重组归因于过去三个月内各部门内部 AI 智能体使用量增长超过 600%。 这表明一家关键互联网基础设施公司正转向以 AI 为驱动的劳动力重组，可能影响更广泛的科技行业就业趋势，并凸显 AI 智能体对人类岗位的替代日益加剧。 此次裁员为一次性完成，遣散方案包括：至 2026 年底的全额基本工资补偿、美国员工医疗保险延至年底、股权归属延至 2026 年 8 月 15 日，以及对未满一年归属期的员工豁免“悬崖期”条款并按比例计算股权。
 
 telegram · zaihuapd · May 8, 08:15
 
-**背景**: Cloudflare 是一家主要的互联网基础设施公司，提供 CDN 和 DDoS 保护等服务。AI 智能体是能够自主使用工具和流程执行任务的系统；其快速采用可能导致因任务自动化而减少劳动力。悬崖期条款是一项要求员工完成最低服务期才能获得股权权益的规定，常用于初创公司。
+**背景**: AI 智能体是能够自主执行任务、做出决策并与环境交互的软件工具，它们利用内部系统和企业工具的数据。像 Cloudflare 这样的公司正越来越多地在工程、人力资源、财务和市场等部门部署 AI 智能体来自动化日常工作，从而减少对人类员工的需求。这一趋势反映了更广泛的行业变革，即 AI 的采用直接影响了劳动力规模和结构。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/AI_agent">AI agent</a></li>
-<li><a href="https://www.lawinsider.com/clause/cliff-vesting">Cliff Vesting Sample Clauses | Law Insider</a></li>
+<li><a href="https://github.com/resources/articles/what-are-ai-agents">What are AI agents ? · GitHub</a></li>
+<li><a href="https://www.grammarly.com/agentic-ai">What is Agentic AI ? | Agentic AI 101</a></li>
 
 </ul>
 </details>
 
-**标签**: `#Cloudflare`, `#AI`, `#layoffs`, `#corporate restructuring`, `#tech industry`
+**标签**: `#Cloudflare`, `#layoffs`, `#AI`, `#restructuring`, `#tech industry`
 
 ---
 
 <a id="item-10"></a>
-## [Anthropic 拟巨额融资，估值逼近万亿美元](https://www.ft.com/content/a40cafcc-0fa4-4e70-9e24-90d826aea56d) ⭐️ 8.0/10
+## [Anthropic 拟融资数百亿美元，估值逼近万亿美元](https://www.ft.com/content/a40cafcc-0fa4-4e70-9e24-90d826aea56d) ⭐️ 8.0/10
 
-Anthropic 正在考虑今年夏天募集数百亿美元的新一轮融资，这可能使估值接近 1 万亿美元，超越 OpenAI 约 8800 亿美元的估值。 这将使 Anthropic 成为估值最高的 AI 创业公司，超越 OpenAI，并表明 AI 竞赛中资本密集度不断升级，各公司争相确保计算基础设施。 今年 2 月，Anthropic 完成了一轮 300 亿美元融资，投后估值 3800 亿美元；二级市场交易显示隐含估值在 1 万亿至 1.2 万亿美元之间。新融资旨在支撑算力基础设施的重大扩容。
+据报道，Anthropic 正计划在今年夏天筹集数百亿美元资金，用于扩充其算力基础设施，此举可能将其估值推高至近 1 万亿美元，超越 OpenAI。 这轮融资将成为 AI 行业的一个重要里程碑，标志着投资者信心从 OpenAI 转向 Anthropic，并凸显前沿 AI 开发对资本的巨大需求。 在 Forge Global 的二级市场上，Anthropic 的隐含估值已达到 1 万亿至 1.2 万亿美元，高于 OpenAI 约 8800 亿美元的估值。而就在今年 2 月，Anthropic 刚完成一轮 300 亿美元融资，估值 3800 亿美元。
 
 telegram · zaihuapd · May 8, 11:15
 
-**背景**: Anthropic 是一家专注于开发安全、强大 AI 系统的领先 AI 公司，与 OpenAI 直接竞争。近年来 AI 行业出现大规模投资，随着对先进计算资源需求的增长，估值飙升。此次融资反映了 AI 公司通过筹集巨额资金建设数据中心和购买 GPU 的广泛趋势。
+**背景**: Anthropic 由前 OpenAI 员工创立，是一家领先的 AI 安全初创公司，与 OpenAI 直接竞争。像 Forge Global 这样的私人二级市场允许投资者交易未上市公司的股份，为初创公司的感知价值提供实时指标。估值的快速飙升反映了 Anthropic 强劲的企业客户增长以及 AI 算力资源的巨大需求。
 
-**标签**: `#AI`, `#融资`, `#Anthropic`, `#OpenAI`, `#估值`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://grokipedia.com/page/Forge_Global">Forge Global</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI`, `#Anthropic`, `#funding`, `#valuation`, `#startup`
 
 ---
 
 <a id="item-11"></a>
-## [美国怀疑英伟达芯片经泰国走私至阿里巴巴](https://www.bloomberg.com/news/articles/2026-05-08/us-said-to-suspect-nvidia-chips-smuggled-to-alibaba-via-thailand) ⭐️ 8.0/10
+## [美国怀疑英伟达芯片经泰国走私至中国，阿里巴巴被指为终端客户](https://www.bloomberg.com/news/articles/2026-05-08/us-said-to-suspect-nvidia-chips-smuggled-to-alibaba-via-thailand) ⭐️ 8.0/10
 
-美国检方怀疑泰国公司 OBON Corp. 将价值 25 亿美元的 Super Micro 服务器（内含先进英伟达芯片）走私至中国，阿里巴巴是终端客户之一。 此案凸显了美中在 AI 芯片出口管制上的持续紧张，可能导致美国收紧对泰国的芯片出口限制，影响区域 AI 发展。 阿里巴巴否认与 Super Micro 或 OBON 有任何业务关系；Siam AI 的 CEO 称自己已离开 OBON，公司未参与走私。
+美国检方怀疑泰国公司 OBON Corp. 将价值 25 亿美元的 Super Micro 服务器（内含先进英伟达芯片）走私至中国，阿里巴巴集团被指为多个终端客户之一。 此案凸显了持续的美中科技紧张局势，可能导致美国加强对泰国的出口管制，从而阻碍泰国的人工智能发展并影响全球供应链。 OBON 曾参与创建泰国主权 AI 云 Siam AI，后者获得了英伟达合作伙伴地位。阿里巴巴否认与 Super Micro 或 OBON 有任何业务关系。
 
 telegram · zaihuapd · May 8, 13:23
 
-**背景**: 自 2022 年起，美国限制向中国出口英伟达 A100 和 H100 等先进 AI 芯片，以防止军事用途。泰国因管制较松成为潜在的转运点。Super Micro 是主要服务器制造商，其服务器常搭载英伟达 GPU。
+**背景**: 美国已对向中国出口先进英伟达芯片实施管制，以防止其用于军事领域。通过泰国等第三国的走私路线成为关注焦点，促使调查展开。Super Micro 服务器是常用于人工智能和数据中心的高性能计算系统。
 
 <details><summary>参考链接</summary>
 <ul>
 <li><a href="https://www.supermicro.com/">Supermicro Data Center Server , Blade, Data Storage, AI System</a></li>
-<li><a href="https://siam.ai/">SIAM AI CORPORATION CO., LTD.</a></li>
+<li><a href="https://siam.ai/">Siam ai corporation co., ltd.</a></li>
 
 </ul>
 </details>
 
-**标签**: `#Nvidia`, `#chip smuggling`, `#US-China trade`, `#AI`, `#export controls`
+**标签**: `#export controls`, `#Nvidia`, `#smuggling`, `#Alibaba`, `#US-China relations`
 
 ---
 
 <a id="item-12"></a>
-## [苹果拟结束台积电独家代工，考虑英特尔](https://t.me/zaihuapd/41292) ⭐️ 8.0/10
+## [DeepSeek 寻求 450 亿美元估值，国资或领投](https://t.me/zaihuapd/41289) ⭐️ 8.0/10
 
-据《华尔街日报》报道，苹果正考虑结束自 2014 年以来由台积电独家代工芯片的策略，探索将部分中低端处理器交由其他厂商生产。英特尔是潜在候选，最早可能于 2027 年利用 18A 工艺为苹果代工部分 Mac、iPad 或 iPhone 芯片。 此举可能重塑半导体代工格局，减少苹果对单一供应商的依赖，并为英特尔的代工业务开辟重要的收入来源。这也凸显了英伟达等 AI 芯片厂商给台积电带来的日益增长的需求压力。 英特尔的角色仅限于代工制造，苹果保留芯片设计。18A 工艺是英特尔预计能带来性能和功耗改进的先进节点，但时间表仍属初步，可能发生变化。
+据报道，DeepSeek 正在其首次大规模外部融资中寻求约 450 亿美元的估值，中国国家集成电路产业投资基金可能领投。 此轮融资将标志着国有资本深度介入中国人工智能领域，加强了政府对核心 AI 公司的支持，并显示出国家对 DeepSeek 的强力背书。 这是 DeepSeek 首次进行大规模外部融资，此前该公司完全由其母公司对冲基金 High-Flyer 出资。450 亿美元的估值将使 DeepSeek 成为中国估值最高的 AI 初创公司之一。
 
-telegram · zaihuapd · May 8, 17:18
+telegram · zaihuapd · May 8, 14:59
 
-**背景**: 自 2014 年从三星转投台积电以来，苹果一直独家依赖台积电为其定制芯片（A 系列和 M 系列）。台积电的先进产能日益受到 AI 公司订单的挤占，促使苹果寻求供应链多元化。英特尔正在扩大其代工服务，并将 18A 定位为面向外部客户的有竞争力的节点。
+**背景**: DeepSeek 由 High-Flyer 联合创始人梁文锋于 2023 年 7 月创立。该公司以开发开放权重的大型语言模型而闻名，其训练成本远低于 OpenAI 等竞争对手，尽管面临美国芯片出口限制，只能使用性能较低的硬件。该公司于 2025 年 1 月发布的 R1 模型以其极低的训练成本和高性能震惊了业界。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.intel.com/content/www/us/en/foundry/process/18a.html">Intel 18A | See Our Biggest Process Innovation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DeepSeek_(Company)">DeepSeek (Company)</a></li>
+<li><a href="https://www.deepseek.com/en/">DeepSeek</a></li>
 
 </ul>
 </details>
 
-**标签**: `#苹果`, `#芯片代工`, `#台积电`, `#英特尔`, `#供应链`
+**标签**: `#AI`, `#funding`, `#DeepSeek`, `#China`, `#semiconductor`
+
+---
+
+<a id="item-13"></a>
+## [苹果或结束台积电独家代工，考虑英特尔代工部分芯片](https://t.me/zaihuapd/41292) ⭐️ 8.0/10
+
+据报道，苹果正考虑结束台积电自 2014 年以来的独家芯片代工协议，最早可能在 2027 年将部分中低端芯片交由英特尔的 18A 工艺生产。 此举将多元化苹果的供应链，减少对台积电的依赖，而台积电目前正优先处理英伟达等 AI 企业的代工需求。同时，这也将为英特尔的代工业务带来重大利好。 英特尔的参与仅限于代工制造，不涉及芯片设计。苹果此举是由于台积电因 AI 芯片订单激增而产能紧张。
+
+telegram · zaihuapd · May 8, 17:18
+
+**背景**: 自 2014 年以来，苹果一直依赖台积电独家代工其自研的 A 系列和 M 系列芯片。苹果自行设计芯片，但将制造外包。转向英特尔将是半导体供应链的重大变化，可能挑战台积电的主导地位。
+
+**标签**: `#Apple`, `#TSMC`, `#Intel`, `#chip manufacturing`, `#supply chain`
 
 ---

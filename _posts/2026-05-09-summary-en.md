@@ -5,270 +5,269 @@ date: 2026-05-09
 lang: en
 ---
 
-> From 36 items, 12 important content pieces were selected
+> From 37 items, 13 important content pieces were selected
 
 ---
 
-1. [AI is breaking two vulnerability cultures](#item-1) ⭐️ 9.0/10
-2. [Triton v3.7.0: New Operations, Scaled BMM, and FP8 Constants](#item-2) ⭐️ 8.0/10
-3. [Google reCAPTCHA breaks for de-googled Android users](#item-3) ⭐️ 8.0/10
-4. [Meshtastic: Off-Grid Mesh Text Messaging](#item-4) ⭐️ 8.0/10
-5. [Mojo 1.0 Beta: Python-Compatible Language with Rust-Like Performance](#item-5) ⭐️ 8.0/10
-6. [Mozilla Hardens Firefox Using Claude Mythos AI](#item-6) ⭐️ 8.0/10
-7. [ChatGPT Adds 'Trusted Contact' Feature for Self-Harm Detection](#item-7) ⭐️ 8.0/10
-8. [OpenAI Codex Gets Chrome Extension for Browser Agent Tasks](#item-8) ⭐️ 8.0/10
-9. [Cloudflare lays off 1100+ employees, cites AI-driven restructuring](#item-9) ⭐️ 8.0/10
-10. [Anthropic Plans Massive Funding Round, Valuation Could Hit $1 Trillion](#item-10) ⭐️ 8.0/10
-11. [US Suspects Nvidia Chips Smuggled to Alibaba via Thailand](#item-11) ⭐️ 8.0/10
-12. [Apple may end TSMC's exclusive chip foundry deal, considers Intel](#item-12) ⭐️ 8.0/10
+1. [Mozilla uses Claude Mythos to find hundreds of Firefox bugs](#item-1) ⭐️ 9.0/10
+2. [Triton 3.7.0: New Tensor Ops and FP8 Support](#item-2) ⭐️ 8.0/10
+3. [Google's reCAPTCHA now performs remote attestation, blocking de-googled Android users](#item-3) ⭐️ 8.0/10
+4. [AI Disrupts Two Vulnerability Disclosure Cultures](#item-4) ⭐️ 8.0/10
+5. [Meta Ends End-to-End Encryption for Instagram DMs](#item-5) ⭐️ 8.0/10
+6. [Mojo 1.0 Beta Released: Python-compatible with Rust ownership and Zig comptime](#item-6) ⭐️ 8.0/10
+7. [Luke Curley Criticizes WebRTC's Packet Dropping for LLM Prompts](#item-7) ⭐️ 8.0/10
+8. [Canvas LMS Hacked by ShinyHunters Disrupts US School Finals](#item-8) ⭐️ 8.0/10
+9. [Cloudflare lays off 1100+, cites 600% AI usage surge as cause](#item-9) ⭐️ 8.0/10
+10. [Anthropic seeks hundreds of billions in funding, valuation nears $1 trillion](#item-10) ⭐️ 8.0/10
+11. [US suspects Nvidia chips smuggled to China via Thailand; Alibaba named as end customer](#item-11) ⭐️ 8.0/10
+12. [DeepSeek Seeks $45B Valuation with State-Backed Funding](#item-12) ⭐️ 8.0/10
+13. [Apple May End TSMC's Chip Exclusivity, Consider Intel for Some Chips](#item-13) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [AI is breaking two vulnerability cultures](https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures) ⭐️ 9.0/10
+## [Mozilla uses Claude Mythos to find hundreds of Firefox bugs](https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything) ⭐️ 9.0/10
 
-AI tools like LLMs are accelerating the breakdown of distinct vulnerability disclosure cultures for open source and closed source software by enabling easier exploit generation and analysis. This forces a reevaluation of disclosure norms and embargoes, as the window for coordinated vulnerability disclosure shrinks, affecting both open source and proprietary software ecosystems. The breakdown has been building due to increased software transparency and improved reverse engineering tools, predating LLMs; community comments note that exploit generation via diffing commits was already possible.
+Mozilla utilized a preview of Anthropic's Claude Mythos model to locate and fix hundreds of security vulnerabilities in Firefox, with April 2026 seeing 423 security bug fixes, a dramatic increase from the typical 20-30 per month. This marks a paradigm shift in AI-assisted security, transforming LLMs from generating unusable bug reports to producing high-quality, actionable vulnerability discoveries, which could significantly reduce the cost and effort of open-source software hardening. Among the discovered bugs were a 20-year-old XSLT bug and a 15-year-old bug in the <legend> HTML element; many attempts were blocked by Firefox's defense-in-depth measures, highlighting the model's ability to find subtle flaws.
 
-hackernews · speckx · May 8, 17:55 · [Discussion](https://news.ycombinator.com/item?id=48066524)
+rss · Simon Willison · May 7, 17:56
 
-**Background**: Vulnerability disclosure traditionally followed two cultures: open source, where patches are public and exploits can be reverse-engineered quickly, and closed source, where disclosure is coordinated with embargoes to allow time for fixes. Embargoes are time windows during which a vulnerability is kept secret among trusted parties. AI tools lower the barrier to exploit generation, eroding the effectiveness of embargoes and blurring the distinction between these cultures.
+**Background**: Claude Mythos is an advanced AI model by Anthropic designed for complex, multi-step cybersecurity tasks. Previously, AI-generated security reports were often incorrect and burdensome for maintainers. Mozilla combined improved models with better prompting techniques to filter noise and amplify signal, achieving a breakthrough in vulnerability detection.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://dl.acm.org/doi/full/10.1145/3716822">An Empirical Study on Vulnerability Disclosure Management of ...</a></li>
-<li><a href="https://openssf.org/groups/vulnerability-disclosures/">Vulnerability Disclosures – Open Source Security Foundation</a></li>
-<li><a href="https://www.redhat.com/en/blog/Understanding-security-embargoes-at-Red-Hat">Understanding security embargoes at Red Hat</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_(language_model)">Claude (language model) - Wikipedia</a></li>
+<li><a href="https://www.bbc.com/news/articles/crk1py1jgzko">What is Anthopic's Claude Mythos and what risks does it pose?</a></li>
+<li><a href="https://www.pluralsight.com/resources/blog/ai-and-data/what-is-claude-mythos">What is Claude Mythos? | Pluralsight</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Comments show mixed views: tptacek argues the crackup was predicted and driven by software transparency, not just AI; dmurray sarcastically suggests moving Linux to a closed-source model; rikafurude21 notes it's an old problem reframed; freeqaz cites Log4Shell as an example where black hats exploited public patches before coordinated disclosure.
-
-**Tags**: `#AI`, `#security`, `#vulnerability disclosure`, `#open source`, `#cybersecurity`
+**Tags**: `#AI`, `#security`, `#Firefox`, `#vulnerability detection`, `#LLM`
 
 ---
 
 <a id="item-2"></a>
-## [Triton v3.7.0: New Operations, Scaled BMM, and FP8 Constants](https://github.com/triton-lang/triton/releases/tag/v3.7.0) ⭐️ 8.0/10
+## [Triton 3.7.0: New Tensor Ops and FP8 Support](https://github.com/triton-lang/triton/releases/tag/v3.7.0) ⭐️ 8.0/10
 
-Triton v3.7.0 introduces new operations like tl.squeeze and tl.unsqueeze, scaled batched matrix multiplication (scaled BMM), and the ability to create FP8 constants directly. It also includes backend improvements for AMD/HIP and NVIDIA, along with bug fixes and performance optimizations. Triton is a widely-used GPU compiler for AI/ML, and this release enhances its expressiveness and performance, enabling more efficient custom kernel development. Scaled BMM and FP8 support are particularly important for modern deep learning workloads like transformers. The scaled BMM feature (PR #9000) allows batched matrix multiplication with scaling, beneficial for attention mechanisms. FP8 constants (PR #8882) enable direct creation of 8-bit floating point values. The release also includes breaking changes, such as a deprecation warning for make_block_ptr.
+Triton 3.7.0 introduces tl.squeeze and tl.unsqueeze operations, scaled batched matrix multiplication, and direct creation of FP8 constants. The release also includes backend enhancements for both AMD and NVIDIA GPUs. This release improves Triton's expressiveness for deep learning workloads, particularly for low-precision FP8 computations which are increasingly used for efficient inference. The new operations simplify writing complex GPU kernels. The scaled BMM operation enables efficient batched matrix multiplication with optional scaling. FP8 constants allow direct use of 8-bit floating-point values without conversion. Backend improvements include 2CTA mode and TMA multicast for NVIDIA and various fixes for AMD.
 
 github · atalman · May 7, 22:19
 
-**Background**: Triton is an open-source language and compiler for writing efficient GPU kernels, developed by OpenAI. It allows developers to write high-performance code in Python without needing to use low-level CUDA. Scaled BMM refers to batched matrix multiplication where the result is scaled by a factor, commonly used in scaled dot-product attention. FP8 is an 8-bit floating-point format (E4M3 and E5M2) designed to reduce memory and compute in deep learning while maintaining accuracy.
-
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openai.com/index/triton/">Introducing Triton: Open-source GPU programming for neural networks | OpenAI</a></li>
-<li><a href="https://github.com/triton-lang/triton">GitHub - triton-lang/triton: Development repository for the Triton language and compiler · GitHub</a></li>
-<li><a href="https://developer.nvidia.com/blog/floating-point-8-an-introduction-to-efficient-lower-precision-ai-training/">Floating-Point 8: An Introduction to Efficient, Lower-Precision AI Training | NVIDIA Technical Blog</a></li>
+<li><a href="https://github.com/parca-dev/proton">GitHub - parca-dev/ proton</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Minifloat">Minifloat - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: No community comments were provided in the news item.
-
-**Tags**: `#triton`, `#gpu`, `#compiler`, `#deep-learning`
+**Tags**: `#Triton`, `#GPU compiler`, `#deep learning`, `#release`, `#open source`
 
 ---
 
 <a id="item-3"></a>
-## [Google reCAPTCHA breaks for de-googled Android users](https://reclaimthenet.org/google-broke-recaptcha-for-de-googled-android-users) ⭐️ 8.0/10
+## [Google's reCAPTCHA now performs remote attestation, blocking de-googled Android users](https://reclaimthenet.org/google-broke-recaptcha-for-de-googled-android-users) ⭐️ 8.0/10
 
-Google updated reCAPTCHA to a remote attestation system, causing it to fail for Android users who have removed Google Play Services, such as those running GrapheneOS or Huawei phones. This change restricts access for privacy-conscious users and non-Google devices, highlighting tensions between anti-abuse measures and user autonomy, and may push more websites to seek alternative CAPTCHA solutions. The new reCAPTCHA essentially performs remote attestation, requiring interaction with Google servers and potentially leaking hardware-bound identifiers. Community members describe it as a form of Know Your Customer (KYC) verification.
+Google's new reCAPTCHA effectively performs remote attestation, breaking functionality for de-googled Android users and raising serious privacy concerns. This change impacts users who have chosen to remove Google services from their Android devices, limiting their access to many websites that use reCAPTCHA. It also raises serious privacy concerns as remote attestation can tie device identity to user activity. The new reCAPTCHA uses remote attestation involving a chain of trust from a burned-in private key (EK) to an ephemeral identity key (AIK) signed by Google servers, potentially allowing Google to link device identity across sessions.
 
 hackernews · anonymousiam · May 8, 18:45 · [Discussion](https://news.ycombinator.com/item?id=48067119)
 
-**Background**: De-googled Android refers to devices running Android without Google's proprietary services, often achieved via custom ROMs like GrapheneOS or by disabling Google apps. Remote attestation is a security mechanism where a device proves its integrity to a remote server using hardware-backed keys, commonly used in confidential computing.
+**Background**: Remote attestation is a trusted computing technology where a device proves its integrity to a remote verifier. In this context, Google's reCAPTCHA uses it to ensure the device hasn't been tampered with. De-googled Android refers to devices stripped of Google services, often running custom ROMs. These devices lack necessary proprietary components to pass remote attestation, hence being blocked.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/DeGoogle">DeGoogle - Wikipedia</a></li>
-<li><a href="https://confidentialcomputing.io/2024/10/02/what-is-remote-attestation-enhancing-data-governance-with-confidential-computing/">What Is Remote Attestation? Enhancing Data Governance with ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Remote_attestation">Remote attestation</a></li>
+<li><a href="https://tech.yahoo.com/phones/articles/googling-android-simpler-think-no-193119747.html">De - Googling Android is simpler than you think—no special phone...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters expressed concerns that reCAPTCHA is now a de facto KYC gate, with one user noting it forces users to have a SIM and Google account. Others shared alternatives like hCaptcha or self-hosted verification, while some recounted their experience switching to GrapheneOS and self-hosted services to avoid Google dependency.
+**Discussion**: Comments express frustration and concern. Users discuss technical details of remote attestation and seek alternatives to reCAPTCHA. There is sentiment that this move forces KYC and is an overreach.
 
-**Tags**: `#privacy`, `#Android`, `#reCAPTCHA`, `#degoogling`, `#remote attestation`
+**Tags**: `#reCAPTCHA`, `#Android`, `#privacy`, `#remote attestation`, `#Google`
 
 ---
 
 <a id="item-4"></a>
-## [Meshtastic: Off-Grid Mesh Text Messaging](https://meshtastic.org/docs/introduction/) ⭐️ 8.0/10
+## [AI Disrupts Two Vulnerability Disclosure Cultures](https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures) ⭐️ 8.0/10
 
-Meshtastic, a LoRa-based mesh text messaging system for off-grid communication, has been introduced on its official site, drawing significant community attention with 368 points and 145 comments. This technology enables decentralized, low-power, long-range communication without relying on existing infrastructure, which is crucial for emergency scenarios, outdoor activities, and IoT applications where internet access is unavailable. Meshtastic operates in license-free ISM radio bands using LoRa modulation, with limited transmit power but no restrictions on encryption. It forms a mesh network by rebroadcasting messages, and each device can connect to a single phone.
+A new analysis argues that AI is accelerating the erosion of traditional vulnerability disclosure norms by enabling faster exploit generation and widening the gap between coordinated disclosure and public exploitation. This shift could fundamentally alter how vulnerabilities are reported and patched, potentially increasing the risk of zero-day exploits and making coordinated disclosure less effective. The analysis is rooted in the Log4Shell incident and discusses how AI tools enable attackers to generate exploits faster than defenders can patch, particularly affecting open-source software with public codebases.
 
-hackernews · ColinWright · May 8, 11:22 · [Discussion](https://news.ycombinator.com/item?id=48061566)
+hackernews · speckx · May 8, 17:55 · [Discussion](https://news.ycombinator.com/item?id=48066524)
 
-**Background**: LoRa is a proprietary spread spectrum modulation technique designed for long-range, low-power wireless communication, commonly used in IoT. A mesh network is a topology where each node relays data for others, extending coverage. Meshtastic combines these to create a decentralized off-grid messaging system, operating in the 915 MHz (US) or 868 MHz (EU) ISM bands.
+**Background**: Vulnerability disclosure traditionally follows two main cultures: coordinated disclosure, where researchers privately inform vendors and allow time for patches, and full disclosure, where details are publicly released immediately. The rise of AI and improved software transparency — through open-source adoption and advanced reverse-engineering tools — has blurred this distinction, as attackers can now quickly generate exploits from publicly available patches or commits.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Meshtastic">Meshtastic</a></li>
-<li><a href="https://meshtastic.org/">Off-Grid Communication For Everyone | Meshtastic</a></li>
+**Discussion**: Commenters largely agree that AI is accelerating existing trends rather than creating a new problem, with tptacek noting the long-predicted impact of software transparency. freeqaz highlights Log4Shell as a key example of exploit generation racing against disclosure. However, rikafurude21 argues that cheaper exploit generation makes coordinated disclosure more important, not less.
 
-</ul>
-</details>
-
-**Discussion**: Many commenters expressed excitement about discovering Meshtastic, with some longtime users praising its potential and noting it encouraged them to get a HAM license. However, there were also concerns about the organization's litigiousness, with one user highlighting that the leadership has aggressively protected the 'Meshtastic' name against other projects.
-
-**Tags**: `#mesh networking`, `#LoRa`, `#decentralized communication`, `#amateur radio`, `#open source`
+**Tags**: `#AI`, `#cybersecurity`, `#vulnerability disclosure`, `#open source`, `#Log4Shell`
 
 ---
 
 <a id="item-5"></a>
-## [Mojo 1.0 Beta: Python-Compatible Language with Rust-Like Performance](https://mojolang.org/) ⭐️ 8.0/10
+## [Meta Ends End-to-End Encryption for Instagram DMs](https://www.pcmag.com/news/meta-shuts-down-end-to-end-encryption-for-instagram-dms-messaging) ⭐️ 8.0/10
 
-Mojo 1.0 Beta has been released, introducing a Python-compatible programming language that combines high-level syntax with systems-level performance features such as ownership and comptime (compile-time computation). This release is significant because Mojo aims to bridge the gap between ease of use (Python) and raw performance (C++/Rust), potentially transforming AI and high-performance computing by allowing developers to write fast code without sacrificing productivity. It also generates high community excitement, with many hoping it becomes a viable alternative to Julia, Numba, and Triton. Mojo uses MLIR (Multi-Level Intermediate Representation) rather than directly targeting LLVM, enabling better optimization for CPUs, GPUs, and other accelerators. However, the compiler remains closed source as of October 2025, with an open source standard library; Modular has committed to open-sourcing Mojo in fall 2026.
+Meta has discontinued end-to-end encryption for Instagram direct messages, citing low opt-in rates. The company will now store messages unencrypted. This decision raises concerns about user privacy and signals a step backward from industry trends toward stronger encryption. Critics argue that Meta prioritizes access to user data for advertising and compliance over privacy. The encryption feature was opt-in and required users to enable it manually. Meta claims few users chose to turn it on, making the feature unsustainable.
 
-hackernews · sbt567 · May 8, 02:49 · [Discussion](https://news.ycombinator.com/item?id=48057901)
+hackernews · tcp_handshaker · May 8, 21:47 · [Discussion](https://news.ycombinator.com/item?id=48069192)
 
-**Background**: Mojo is a systems programming language developed by Modular Inc., designed for high-performance AI infrastructure. It builds on MLIR, a compiler framework that allows higher-level optimizations than LLVM alone. Key features include an ownership model similar to Rust for memory safety without garbage collection, and comptime (compile-time computation) for zero-cost abstractions akin to Zig. Mojo's syntax is intentionally Python-compatible to ease adoption by the large Python ecosystem, particularly in machine learning and scientific computing.
+**Background**: End-to-end encryption ensures that only the sender and recipient can read messages, preventing even the service provider from accessing content. Privacy advocates often push for default encryption, as seen in apps like WhatsApp (also owned by Meta) and Signal. Meta's decision contrasts with its earlier promises to roll out encryption across its messaging platforms.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Mojo_(programming_language)">Mojo (programming language)</a></li>
-<li><a href="https://www.modular.com/open-source/mojo">Mojo : Powerful CPU+GPU Programming</a></li>
-<li><a href="https://zig.guide/language-basics/comptime/">Comptime - zig.guide</a></li>
+**Discussion**: Comments criticize Meta for not making encryption default, comparing it unfavorably to Signal and WhatsApp. Some argue that Meta's move reflects a broader corporate reluctance to prioritize privacy over business interests, while others express frustration over the lack of progress in protecting user data.
 
-</ul>
-</details>
-
-**Discussion**: Community members are enthusiastic about Mojo's unique features, with one user praising its ownership model, comptime, and SIMD support, calling it 'the first language in a long time that isn't just an LLVM wrapper.' However, some express concerns about syntax differences from Python (e.g., string indexing behavior) and note that Julia already addresses many of the same use cases. Others worry about correctness issues and the language's closed-source status, though the promise of open-sourcing in 2026 is well received.
-
-**Tags**: `#programming language`, `#performance`, `#python`, `#systems programming`, `#ML`
+**Tags**: `#privacy`, `#encryption`, `#Instagram`, `#Meta`, `#tech-policy`
 
 ---
 
 <a id="item-6"></a>
-## [Mozilla Hardens Firefox Using Claude Mythos AI](https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything) ⭐️ 8.0/10
+## [Mojo 1.0 Beta Released: Python-compatible with Rust ownership and Zig comptime](https://mojolang.org/) ⭐️ 8.0/10
 
-Mozilla used access to the Claude Mythos preview to locate and fix hundreds of vulnerabilities in Firefox, dramatically increasing monthly security bug fixes from 20-30 to 423 in April 2026. This demonstrates a major improvement in AI-assisted security auditing, shifting from ineffective AI bug reports to highly effective vulnerability detection, potentially setting a new standard for open-source project security. The harnessed AI discovered a 20-year-old XSLT bug and a 15-year-old bug in the <legend> element, while many attempts were blocked by Firefox's existing defense-in-depth measures, which is reassuring.
+Modular Inc. released Mojo 1.0 Beta, a programming language that combines Python syntax with Rust-like ownership and Zig-like comptime, targeting high-performance ML and systems programming. Mojo aims to bridge the gap between high-level usability and low-level performance, potentially enabling Python developers to write efficient systems code without switching languages. Its unique use of MLIR for compiler infrastructure allows it to target CPUs, GPUs, and TPUs from a single codebase. Mojo is currently closed-source with an open-source standard library, but Modular has committed to open-sourcing it in Fall 2026. It supports first-class SIMD, a rich type system, and can interoperate with Python via a foreign function interface.
 
-rss · Simon Willison · May 7, 17:56
+hackernews · sbt567 · May 8, 02:49 · [Discussion](https://news.ycombinator.com/item?id=48057901)
 
-**Background**: Firefox is a widely-used open-source browser. Claude Mythos Preview is a highly capable AI model from Anthropic, particularly strong at software engineering and cybersecurity tasks. Traditionally, AI-generated security bug reports were often low-quality and imposed a burden on maintainers.
+**Background**: Mojo is built on MLIR (Multi-Level Intermediate Representation), a compiler framework that enables higher-level optimization passes compared to LLVM alone. This allows Mojo to efficiently target diverse hardware including GPUs and TPUs. The ownership model borrows from Rust, ensuring memory safety without garbage collection, while comptime (compile-time execution) from Zig enables powerful metaprogramming.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.anthropic.com/claude-mythos-preview-risk-report">Alignment Risk Update: Claude Mythos Preview - anthropic.com</a></li>
-<li><a href="https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities">Our evaluation of Claude Mythos Preview’s cyber capabilities</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mojo_(programming_language)">Mojo (programming language)</a></li>
+<li><a href="https://zig.guide/language-basics/comptime/">Comptime | zig .guide</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#security`, `#AI`, `#Firefox`, `#vulnerability detection`, `#open source`
+**Discussion**: Commenters expressed excitement about Mojo's performance and features like ownership and comptime, but noted challenges for Python developers due to syntax differences and limited Python compatibility. Some users also expressed impatience for the planned open-sourcing in 2026.
+
+**Tags**: `#programming language`, `#performance`, `#ML`, `#systems programming`, `#Mojo`
 
 ---
 
 <a id="item-7"></a>
-## [ChatGPT Adds 'Trusted Contact' Feature for Self-Harm Detection](https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification) ⭐️ 8.0/10
+## [Luke Curley Criticizes WebRTC's Packet Dropping for LLM Prompts](https://simonwillison.net/2026/May/9/luke-curley/#atom-everything) ⭐️ 8.0/10
 
-OpenAI has introduced an optional 'trusted contact' feature for adult ChatGPT users, which can notify a designated friend or family member when the system detects self-harm or suicidal language. The notification is sent after a trained team reviews the conversation and confirms a serious safety concern, without sharing the chat content. This feature addresses a critical real-world problem where AI interactions may inadvertently escalate mental health crises, following a tragic incident involving a teenager. It extends safety measures to adults and sets an industry precedent for responsible AI deployment. The feature requires both the user and the trusted contact to be adults (19+ in South Korea), and the contact must accept the invitation within one week. Notifications can be sent via email, SMS, or ChatGPT in-app notification, and Meta has implemented a similar feature for Instagram to alert parents when teens repeatedly search for self-harm topics.
+Luke Curley argues that WebRTC's design to drop audio packets for low latency harms the accuracy of LLM prompts, and notes that browsers cannot even retransmit lost packets, citing Discord's experience. This highlights a fundamental conflict between real-time communication optimizations and the accuracy requirements of AI models, which could impact the quality of voice-based AI interactions. WebRTC aggressively drops audio packets during poor network conditions to maintain low latency, but this can lead to distorted audio; Curley notes that waiting an extra 200ms would be preferable for accurate LLM prompts.
 
-telegram · zaihuapd · May 8, 02:47
+rss · Simon Willison · May 9, 01:03
 
-**Background**: ChatGPT's new feature builds on previous safety measures for teens, which were introduced after a 16-year-old boy died by suicide following prolonged conversations with the AI chatbot. The incident raised concerns about AI's role in mental health support and the need for better safeguards. OpenAI has now extended similar protections to adult users.
+**Background**: WebRTC is a standard for real-time communication in browsers, designed for low-latency scenarios like video calls. Large language models (LLMs) process voice prompts and require accurate input, making packet loss problematic.
 
-**Tags**: `#safety`, `#AI ethics`, `#ChatGPT`, `#mental health`, `#OpenAI`
+**Tags**: `#WebRTC`, `#LLM`, `#real-time communication`, `#audio`, `#latency`
 
 ---
 
 <a id="item-8"></a>
-## [OpenAI Codex Gets Chrome Extension for Browser Agent Tasks](https://developers.openai.com/codex/changelog) ⭐️ 8.0/10
+## [Canvas LMS Hacked by ShinyHunters Disrupts US School Finals](https://www.cnn.com/2026/05/07/us/canvas-hack-strands-college-students-finals-week) ⭐️ 8.0/10
 
-OpenAI has released a Chrome extension for Codex, its AI coding agent, allowing it to operate directly in the browser to perform multi-step tasks like navigation and data entry across multiple tabs in the background. This extension transforms Codex from a coding tool into a practical browser automation agent, enabling users to delegate repetitive web tasks without API integration, which could significantly boost productivity for developers and knowledge workers. Codex executes tasks by writing and running code in background tabs, automatically combining browser and plugin tools as needed. The extension is available globally except the EU and UK, with those regions to be supported later.
+Instructure's Canvas learning management system suffered a ransomware attack and data breach by the ShinyHunters hacking group, causing widespread disruption during US schools' finals week. The attack compromised over 300 TB of data, including student names, IDs, and email addresses, and forced some universities to reschedule exams. This incident highlights the vulnerability of critical educational infrastructure, affecting thousands of schools and millions of students during a high-stakes academic period. It underscores the urgent need for stronger cybersecurity measures in the education technology sector, especially as ransomware groups increasingly target sensitive student data. ShinyHunters claimed responsibility for two incidents against Instructure in May 2026, with the first on May 1 leaking usernames, emails, and student IDs. The second attack on May 7 involved ransomware, rendering Canvas inaccessible for many users, and allegedly affecting nearly 9,000 schools or organizations with over 300 TB of data stolen.
 
-telegram · zaihuapd · May 8, 04:17
+telegram · zaihuapd · May 8, 04:30
 
-**Background**: Codex is an AI coding agent by OpenAI released in April 2025, capable of writing code, fixing bugs, and accelerating software engineering tasks. Browser automation for AI agents typically relies on the Chrome DevTools Protocol (CDP) to control the browser. This new extension extends Codex's capabilities to directly interact with web applications in real-time.
+**Background**: Canvas is a cloud-based learning management system (LMS) developed by Instructure, widely used in K-12, higher education, and corporate training for course management, quizzes, and student engagement. ShinyHunters is a black-hat criminal hacking group formed around 2019, known for orchestrating multiple data breaches across various industries. The group often exfiltrates data and demands ransom, threatening to leak sensitive information if not paid.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Codex_(AI_agent)">Codex (AI agent) - Wikipedia</a></li>
-<li><a href="https://openai.com/codex/">Codex | AI Coding Partner from OpenAI</a></li>
-<li><a href="https://www.allabtai.com/ai-browser-automation/">AI Browser Automation: Complete Guide for AI Agents (2026)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Canvas_LMS">Canvas LMS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ShinyHunters">ShinyHunters - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#OpenAI`, `#Codex`, `#Chrome扩展`, `#AI agent`, `#浏览器自动化`
+**Tags**: `#cybersecurity`, `#data breach`, `#education`, `#ransomware`, `#canvas`
 
 ---
 
 <a id="item-9"></a>
-## [Cloudflare lays off 1100+ employees, cites AI-driven restructuring](https://blog.cloudflare.com/building-for-the-future/) ⭐️ 8.0/10
+## [Cloudflare lays off 1100+, cites 600% AI usage surge as cause](https://blog.cloudflare.com/building-for-the-future/) ⭐️ 8.0/10
 
-On May 7, 2026, Cloudflare announced layoffs of over 1100 employees, citing a 600% increase in internal AI usage over the past three months as the primary driver for organizational restructuring. This layoff reflects a broader industry trend where rapid AI adoption is reshaping workforce structures, potentially setting a precedent for other tech companies considering similar moves. The severance package includes full base salary until end of 2026, US health insurance through year-end, equity vesting extended to August 15, 2026, and waiver of cliff vesting for employees with less than one year of service. The company emphasized a one-time, single-round layoff, communicated directly via email.
+Cloudflare announced layoffs of over 1,100 employees globally, attributing the restructuring to a 600% increase in internal AI agent usage across departments within the past three months. This signals a major shift by a key internet infrastructure company toward AI-driven workforce restructuring, potentially influencing broader tech industry employment trends and highlighting the growing displacement of human roles by AI agents. The layoff is a one-time event, with severance including full base salary through end of 2026, U.S. health insurance coverage until year-end, extended equity vesting to August 15, 2026, and cliff waivers for those not yet vested for one year.
 
 telegram · zaihuapd · May 8, 08:15
 
-**Background**: Cloudflare is a major internet infrastructure company providing services like CDN and DDoS protection. AI agents are systems that autonomously perform tasks using tools and workflows; their rapid adoption can lead to workforce reduction as tasks are automated. Cliff vesting is a provision requiring a minimum service period before earning equity rights, commonly used in startups.
+**Background**: AI agents are autonomous software tools that can perform tasks, make decisions, and interact with environments using data from internal systems and enterprise tools. Companies like Cloudflare are increasingly deploying AI agents across departments such as engineering, HR, finance, and marketing to automate routine work, leading to reduced need for human employees. This trend reflects a broader industry shift where AI adoption is directly impacting workforce size and structure.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/AI_agent">AI agent</a></li>
-<li><a href="https://www.lawinsider.com/clause/cliff-vesting">Cliff Vesting Sample Clauses | Law Insider</a></li>
+<li><a href="https://github.com/resources/articles/what-are-ai-agents">What are AI agents ? · GitHub</a></li>
+<li><a href="https://www.grammarly.com/agentic-ai">What is Agentic AI ? | Agentic AI 101</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Cloudflare`, `#AI`, `#layoffs`, `#corporate restructuring`, `#tech industry`
+**Tags**: `#Cloudflare`, `#layoffs`, `#AI`, `#restructuring`, `#tech industry`
 
 ---
 
 <a id="item-10"></a>
-## [Anthropic Plans Massive Funding Round, Valuation Could Hit $1 Trillion](https://www.ft.com/content/a40cafcc-0fa4-4e70-9e24-90d826aea56d) ⭐️ 8.0/10
+## [Anthropic seeks hundreds of billions in funding, valuation nears $1 trillion](https://www.ft.com/content/a40cafcc-0fa4-4e70-9e24-90d826aea56d) ⭐️ 8.0/10
 
-Anthropic is considering raising hundreds of billions of dollars in a new funding round this summer, which could push its valuation to nearly $1 trillion, surpassing OpenAI's latest estimated valuation of around $880 billion. This would make Anthropic the most valuable AI startup, overtaking OpenAI, and signals the escalating capital intensity in the AI race as companies race to secure computing infrastructure. In February, Anthropic completed a $30 billion funding round at a $380 billion valuation; secondary market trading now implies a valuation between $1 trillion and $1.2 trillion. The new funding is intended to support significant expansion of computing capacity.
+Anthropic is reportedly planning to raise hundreds of billions of dollars this summer to expand its computing infrastructure, potentially pushing its valuation to nearly $1 trillion and surpassing OpenAI. This funding round would mark a major milestone in the AI industry, signaling a shift in investor confidence from OpenAI to Anthropic and underscoring the escalating capital requirements for frontier AI development. On Forge Global's secondary market, Anthropic's implied valuation has already reached between $1 trillion and $1.2 trillion, above OpenAI's ~$880 billion. Just in February, Anthropic closed a $30 billion round at a $380 billion valuation.
 
 telegram · zaihuapd · May 8, 11:15
 
-**Background**: Anthropic is a leading AI company focused on developing safe and capable AI systems, competing directly with OpenAI. The AI industry has seen massive investments in recent years, with valuations soaring as demand for advanced computing resources grows. This fundraising reflects a broader trend of AI companies raising enormous sums to build data centers and acquire GPUs.
+**Background**: Anthropic, founded by former OpenAI employees, is a leading AI safety startup competing directly with OpenAI. Private secondary markets like Forge Global allow investors to trade shares of pre-IPO companies, providing a real-time indicator of a startup's perceived value. The rapid valuation surge reflects Anthropic's strong enterprise customer growth and the intense demand for AI compute resources.
 
-**Tags**: `#AI`, `#融资`, `#Anthropic`, `#OpenAI`, `#估值`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://grokipedia.com/page/Forge_Global">Forge Global</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#Anthropic`, `#funding`, `#valuation`, `#startup`
 
 ---
 
 <a id="item-11"></a>
-## [US Suspects Nvidia Chips Smuggled to Alibaba via Thailand](https://www.bloomberg.com/news/articles/2026-05-08/us-said-to-suspect-nvidia-chips-smuggled-to-alibaba-via-thailand) ⭐️ 8.0/10
+## [US suspects Nvidia chips smuggled to China via Thailand; Alibaba named as end customer](https://www.bloomberg.com/news/articles/2026-05-08/us-said-to-suspect-nvidia-chips-smuggled-to-alibaba-via-thailand) ⭐️ 8.0/10
 
-US prosecutors suspect Thai company OBON Corp. smuggled $2.5 billion worth of Super Micro servers containing advanced Nvidia chips to China, with Alibaba as one end customer. This case highlights ongoing US-China tensions over AI chip export controls and could lead to tighter restrictions on chip shipments to Thailand, affecting regional AI development. Alibaba denies any business relationship with Super Micro or OBON, and Siam AI's CEO claims he left OBON and that the company was not involved in smuggling.
+US prosecutors suspect Thai company OBON Corp. smuggled $2.5 billion worth of Super Micro servers containing advanced Nvidia chips to China, with Alibaba Group identified as one of the end customers. This case highlights ongoing US-China tech tensions and could lead to stricter export controls on Thailand, potentially hindering Thailand's AI development and affecting global supply chains. OBON was involved in creating Thailand's sovereign AI cloud, Siam AI, which holds an Nvidia partner status. Alibaba denies any business relationship with Super Micro or OBON.
 
 telegram · zaihuapd · May 8, 13:23
 
-**Background**: Since 2022, the US has restricted exports of advanced Nvidia AI chips like the A100 and H100 to China to prevent military use. Thailand has become a potential transshipment point due to looser controls. Super Micro is a major server manufacturer, and its servers often contain Nvidia GPUs.
+**Background**: The US has imposed export controls on advanced Nvidia chips to China to prevent their use in military applications. Smuggling routes through third countries like Thailand have become a concern, prompting investigations. Super Micro servers are high-performance computing systems often used in AI and data centers.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://www.supermicro.com/">Supermicro Data Center Server , Blade, Data Storage, AI System</a></li>
-<li><a href="https://siam.ai/">SIAM AI CORPORATION CO., LTD.</a></li>
+<li><a href="https://siam.ai/">Siam ai corporation co., ltd.</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Nvidia`, `#chip smuggling`, `#US-China trade`, `#AI`, `#export controls`
+**Tags**: `#export controls`, `#Nvidia`, `#smuggling`, `#Alibaba`, `#US-China relations`
 
 ---
 
 <a id="item-12"></a>
-## [Apple may end TSMC's exclusive chip foundry deal, considers Intel](https://t.me/zaihuapd/41292) ⭐️ 8.0/10
+## [DeepSeek Seeks $45B Valuation with State-Backed Funding](https://t.me/zaihuapd/41289) ⭐️ 8.0/10
 
-According to the Wall Street Journal, Apple is considering ending TSMC's exclusive chip manufacturing arrangement that has been in place since 2014, and may outsource some mid-to-low-end processors to other foundries. Intel is a potential candidate, possibly using its 18A process to manufacture chips for Mac, iPad, or iPhone as early as 2027. This move could reshape the semiconductor foundry landscape by reducing Apple's reliance on a single supplier and opening a significant revenue stream for Intel's foundry business. It also highlights the growing demand pressure on TSMC from AI chipmakers like Nvidia. Intel's role would be limited to manufacturing; Apple would retain chip design. The 18A process is Intel's advanced node expected to deliver performance and power improvements, though the timeline remains tentative and subject to change.
+DeepSeek is reportedly seeking a $45 billion valuation in its first major external funding round, with China's National Integrated Circuit Industry Investment Fund potentially leading the investment. This funding round would mark significant state-backed capital entering China's AI sector, deepening government involvement in core AI companies and signaling strong national support for DeepSeek. This is DeepSeek's first major external fundraising; the company was previously wholly funded by parent hedge fund High-Flyer. The $45 billion valuation would be one of the highest for a Chinese AI startup.
 
-telegram · zaihuapd · May 8, 17:18
+telegram · zaihuapd · May 8, 14:59
 
-**Background**: Apple has relied exclusively on TSMC for its custom chips (A-series and M-series) since 2014, after transitioning from Samsung. TSMC's leading-edge capacity is increasingly constrained by orders from AI companies, prompting Apple to diversify its supply chain. Intel has been expanding its foundry services and positions 18A as a competitive node for external customers.
+**Background**: DeepSeek was founded in July 2023 by Liang Wenfeng, co-founder of High-Flyer. It is known for developing open-weight large language models at a fraction of the cost of rivals like OpenAI, despite facing US chip export restrictions that forced it to use less powerful hardware. The company's R1 model, released in January 2025, shocked the industry with its low training cost and high performance.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.intel.com/content/www/us/en/foundry/process/18a.html">Intel 18A | See Our Biggest Process Innovation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DeepSeek_(Company)">DeepSeek (Company)</a></li>
+<li><a href="https://www.deepseek.com/en/">DeepSeek</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#苹果`, `#芯片代工`, `#台积电`, `#英特尔`, `#供应链`
+**Tags**: `#AI`, `#funding`, `#DeepSeek`, `#China`, `#semiconductor`
+
+---
+
+<a id="item-13"></a>
+## [Apple May End TSMC's Chip Exclusivity, Consider Intel for Some Chips](https://t.me/zaihuapd/41292) ⭐️ 8.0/10
+
+Apple is reportedly considering ending TSMC's 12-year exclusive chip manufacturing deal and may use Intel's 18A process for some low-end chips as early as 2027. This move would diversify Apple's supply chain, reducing its reliance on TSMC, which is currently prioritizing AI chip demand from Nvidia. It also provides a significant boost to Intel's foundry business. Intel's involvement would be limited to manufacturing only, not chip design. Apple's decision is driven by TSMC's capacity constraints due to surging AI chip orders.
+
+telegram · zaihuapd · May 8, 17:18
+
+**Background**: Since 2014, Apple has relied exclusively on TSMC to manufacture its custom A-series and M-series chips. Apple designs its own chips but outsources fabrication. A shift to Intel would be a major change in the semiconductor supply chain, potentially challenging TSMC's dominance.
+
+**Tags**: `#Apple`, `#TSMC`, `#Intel`, `#chip manufacturing`, `#supply chain`
 
 ---
